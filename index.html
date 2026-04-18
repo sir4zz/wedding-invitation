@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan - Romeo & Juliet</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio id="bg-music" loop>
+        <source src="music/background-song.mp3" type="audio/mpeg">
+    </audio>
+
+    <button id="music-btn" class="music-btn">🎵</button>
+
+    <div class="mobile-container">
+
+        <div id="opening-screen" class="opening-screen">
+            <div class="opening-content">
+                <p class="to-text">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+                <h2 class="guest-name" id="guest-name">Tamu Undangan</h2>
+                <p class="apology">Tanpa mengurangi rasa hormat, kami mengundang Anda untuk hadir di acara pernikahan kami.</p>
+                <h1 class="opening-title">Romeo & Juliet</h1>
+                <button id="open-invitation-btn" class="btn">Buka Undangan</button>
+            </div>
+        </div>
+
+        <main id="main-content" class="hidden">
+            
+            <section id="hero" class="hero section">
+                <div class="hero-overlay"></div>
+                <div class="hero-content fade-in">
+                    <p class="subtitle">THE WEDDING OF</p>
+                    <h1 class="title">Romeo & Juliet</h1>
+                    <p class="date">Sabtu, 25 Desember 2026</p>
+                </div>
+            </section>
+
+            <section id="quote" class="quote section fade-in">
+                <p class="quote-text">"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang."</p>
+                <p class="quote-source">(QS. Ar-Rum: 21)</p>
+            </section>
+
+            <section id="couple" class="couple section">
+                <h2 class="section-title fade-in">Mempelai</h2>
+                
+                <div class="person fade-in">
+                    <div class="photo-frame">
+                        <img src="images/groom.jpg" alt="Mempelai Pria" class="person-img">
+                    </div>
+                    <h3 class="person-name">Romeo Montague</h3>
+                    <p class="parents">Putra pertama dari<br>Bapak Montague & Ibu Lady Montague</p>
+                </div>
+
+                <p class="ampersand fade-in">&</p>
+
+                <div class="person fade-in">
+                    <div class="photo-frame">
+                        <img src="images/bride.jpg" alt="Mempelai Wanita" class="person-img">
+                    </div>
+                    <h3 class="person-name">Juliet Capulet</h3>
+                    <p class="parents">Putri bungsu dari<br>Bapak Capulet & Ibu Lady Capulet</p>
+                </div>
+            </section>
+
+            <section id="event" class="event section fade-in">
+                <h2 class="section-title">Detail Acara</h2>
+                
+                <div class="event-card">
+                    <h3>Akad Nikah</h3>
+                    <p class="event-date">Sabtu, 25 Desember 2026</p>
+                    <p class="event-time">08.00 WIB - Selesai</p>
+                    <p class="event-location">Masjid Agung Kota<br>Jl. Sudirman No. 1, Kota Impian</p>
+                </div>
+
+                <div class="event-card">
+                    <h3>Resepsi</h3>
+                    <p class="event-date">Sabtu, 25 Desember 2026</p>
+                    <p class="event-time">11.00 WIB - 14.00 WIB</p>
+                    <p class="event-location">Gedung Serbaguna<br>Jl. Merdeka No. 45, Kota Impian</p>
+                </div>
+            </section>
+
+            <section id="maps" class="maps section fade-in">
+                <h2 class="section-title">Peta Lokasi</h2>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126907.0396001712!2d106.74542385153246!3d-6.284240378033664!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f14d300d40e1%3A0x6b5cb5b5c9071569!2sJakarta!5e0!3m2!1sid!2sid!4v1689240837851!5m2!1sid!2sid" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </section>
+
+            <section id="countdown" class="countdown section fade-in">
+                <h2 class="section-title">Menuju Hari Bahagia</h2>
+                <div class="timer">
+                    <div class="time-box"><span id="days">00</span><p>Hari</p></div>
+                    <div class="time-box"><span id="hours">00</span><p>Jam</p></div>
+                    <div class="time-box"><span id="minutes">00</span><p>Menit</p></div>
+                    <div class="time-box"><span id="seconds">00</span><p>Detik</p></div>
+                </div>
+            </section>
+
+            <section id="gallery" class="gallery section fade-in">
+                <h2 class="section-title">Galeri Kami</h2>
+                <div class="gallery-grid">
+                    <img src="images/gal-1.jpg" alt="Galeri 1" class="gallery-img">
+                    <img src="images/gal-2.jpg" alt="Galeri 2" class="gallery-img">
+                    <img src="images/gal-3.jpg" alt="Galeri 3" class="gallery-img">
+                    <img src="images/gal-4.jpg" alt="Galeri 4" class="gallery-img">
+                </div>
+            </section>
+
+            <section id="rsvp" class="rsvp section fade-in">
+                <h2 class="section-title">RSVP</h2>
+                <p>Konfirmasi kehadiran Anda melalui form di bawah ini:</p>
+                <form id="rsvp-form" class="rsvp-form">
+                    <input type="text" id="nama" placeholder="Nama Lengkap" required>
+                    <select id="kehadiran" required>
+                        <option value="" disabled selected>Apakah Anda akan hadir?</option>
+                        <option value="Hadir">Ya, Saya akan hadir</option>
+                        <option value="Tidak Hadir">Maaf, saya tidak bisa hadir</option>
+                    </select>
+                    <textarea id="pesan" rows="4" placeholder="Berikan ucapan atau doa (Opsional)"></textarea>
+                    <button type="submit" class="btn">Kirim Konfirmasi</button>
+                </form>
+            </section>
+
+            <section id="closing" class="closing section fade-in">
+                <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir untuk memberikan doa restu.</p>
+                <p>Terima kasih.</p>
+                <h2 class="closing-title">Romeo & Juliet</h2>
+                <p class="family-name">Keluarga Bapak Montague & Keluarga Bapak Capulet</p>
+                
+                <button id="share-btn" class="btn-share">🔗 Bagikan Undangan</button>
+            </section>
+
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

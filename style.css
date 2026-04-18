@@ -1,0 +1,323 @@
+/* --- Variables & Reset --- */
+:root {
+    --bg-color: #FAFAF7; /* Cream/Off-white */
+    --text-color: #4A4A4A;
+    --text-light: #7A7A7A;
+    --accent-color: #B89C81; /* Elegant light brown/gold */
+    --font-heading: 'Cormorant Garamond', serif;
+    --font-body: 'Montserrat', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: #ececec; /* Latar belakang untuk layar besar */
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow: hidden; /* Dikunci saat opening screen */
+}
+
+/* --- Mobile Container (Agar tetap cantik di Desktop) --- */
+.mobile-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: var(--bg-color);
+    min-height: 100vh;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    overflow-x: hidden;
+}
+
+/* --- Typography --- */
+h1, h2, h3, .ampersand {
+    font-family: var(--font-heading);
+    color: var(--accent-color);
+}
+
+/* --- Buttons --- */
+.btn {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.btn:hover {
+    background-color: #9c836c;
+}
+
+/* --- Opening Screen --- */
+.opening-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-color);
+    background-image: url('images/opening-bg.jpg'); /* Opsional */
+    background-size: cover;
+    background-position: center;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.opening-content {
+    background: rgba(250, 250, 247, 0.85);
+    padding: 40px 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+}
+
+.to-text, .apology {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 10px;
+}
+
+.guest-name {
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.opening-title {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.slide-up-hide {
+    opacity: 0;
+    transform: translateY(-100%);
+    pointer-events: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- Music Button --- */
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    z-index: 1000;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* --- Sections --- */
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+.section-title {
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    background-image: url('images/hero-bg.jpg'); /* Gambar Background Hero */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: white;
+}
+.hero .subtitle {
+    letter-spacing: 3px;
+    font-size: 0.9rem;
+}
+.hero .title {
+    font-size: 3.5rem;
+    color: white;
+    margin: 10px 0;
+}
+.hero .date {
+    font-size: 1.1rem;
+    font-weight: 300;
+}
+
+/* --- Quote Section --- */
+.quote {
+    background-color: white;
+}
+.quote-text {
+    font-style: italic;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* --- Mempelai Section --- */
+.person {
+    margin-bottom: 30px;
+}
+.photo-frame {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid var(--accent-color);
+}
+.person-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.person-name {
+    font-size: 1.8rem;
+}
+.parents {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+.ampersand {
+    font-size: 3rem;
+    margin: 20px 0;
+}
+
+/* --- Event Section --- */
+.event-card {
+    background: white;
+    padding: 30px 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-top: 3px solid var(--accent-color);
+}
+.event-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* --- Countdown --- */
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.time-box {
+    background: white;
+    padding: 15px 10px;
+    border-radius: 8px;
+    min-width: 70px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+.time-box span {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+.time-box p {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+}
+
+/* --- Gallery --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+.gallery-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+/* --- RSVP Form --- */
+.rsvp-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    text-align: left;
+}
+.rsvp-form input, .rsvp-form select, .rsvp-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-family: var(--font-body);
+}
+
+/* --- Closing --- */
+.closing {
+    background-color: var(--accent-color);
+    color: white;
+    padding-bottom: 100px; /* Spacer untuk music button */
+}
+.closing-title {
+    font-size: 3rem;
+    color: white;
+    margin: 20px 0 5px;
+}
+.btn-share {
+    margin-top: 30px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* --- Animations --- */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
