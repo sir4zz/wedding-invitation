@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const pesan = document.getElementById('pesan').value;
         
         // Ganti nomor WhatsApp tujuan di bawah ini (Gunakan kode negara, ex: 62)
-        const waNumber = "6281234567890";
+        const waNumber = "6285783979309";
         
         const textMessage = `Halo, saya ${nama}.\n\nTerkait undangan pernikahan, saya mengkonfirmasi: *${kehadiran}*.\n\nPesan: ${pesan}`;
         const waLink = `https://wa.me/${waNumber}?text=${encodeURIComponent(textMessage)}`;
